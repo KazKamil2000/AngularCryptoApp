@@ -1,0 +1,38 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Symbol</th>
+      <th scope="col">Price USD</th>
+      <th scope="col">24H chg%</th>
+      <th scope="col">Click Me!</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let crypto of crypto; index as i">
+      <th scope="row">{{ i + 1 }}.</th>
+      <td>{{ crypto.name }}</td>
+      <td>{{ crypto.symbol }}</td>
+      <td>${{ crypto.priceUsd | number : "1.2-2" }}</td>
+
+      <td *ngIf="crypto.changePercent24Hr > 0" [ngStyle]="{ color: 'green' }">
+        {{ crypto.changePercent24Hr / 100 | percent : "1.2-2" }}
+      </td>
+
+      <td *ngIf="crypto.changePercent24Hr < 0" [ngStyle]="{ color: 'red' }">
+        {{ crypto.changePercent24Hr / 100 | percent : "1.2-2" }}
+      </td>
+
+      <td>
+        <button
+          class="btn btn-outline-dark"
+          (click)="selectedItem(i)"
+          (click)="toDetails()"
+        >
+          More Info
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
