@@ -17,7 +17,7 @@ export class CryptoAdminComponent implements OnInit, OnDestroy {
   cryptoSelect: string = "";
   form!: FormGroup;
   cryptoServiceSubscribe!: Subscription;
-  colors = ["blue", "yellow", "purple"];
+  confirm = ["Confirm"];
 
   constructor(
     private cryptoIdService: CryptoIdService,
@@ -39,9 +39,9 @@ export class CryptoAdminComponent implements OnInit, OnDestroy {
     this.router.navigate([""]);
   }
 
-  acceptedColors(control: FormControl): { [c: string]: boolean } | null {
-    if (this.colors.indexOf(control.value)) {
-      return { colorIsGood: true };
+  acceptedConfirm(control: FormControl): { [c: string]: boolean } | null {
+    if (this.confirm.indexOf(control.value)) {
+      return { confirmIsGood: true };
     }
     return null;
   }
@@ -51,7 +51,7 @@ export class CryptoAdminComponent implements OnInit, OnDestroy {
       cryptos: new FormControl(null, Validators.required),
       favColor: new FormControl(null, [
         Validators.required,
-        this.acceptedColors.bind(this),
+        this.acceptedConfirm.bind(this),
       ]),
     });
 
