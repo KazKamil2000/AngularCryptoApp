@@ -22,7 +22,7 @@ This is my crypto widget app created with Angular, TypeScript, Scss and Bootstra
 
 ### Links
 
-- Live Site URL: (https://your-live-site-url.com)
+- Live Site URL:
 
 ## My process
 
