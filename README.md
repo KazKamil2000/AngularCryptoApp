@@ -14,7 +14,7 @@ This is my crypto widget displaying the current rates of varoius cryptos
 
 ## Overview
 
-This is my crypto widget app created with Angular, TypeScript, Scss and Bootstrap.
+This is my crypto widget app created with Angular, TypeScript, Scss and Bootstrap. All the data is being pulled from an API
 
 ### Screenshot
 
@@ -36,7 +36,7 @@ This is my crypto widget app created with Angular, TypeScript, Scss and Bootstra
 
 ### What I learned
 
-I learned a lot during the creation of this project. Not only I got fimilliar with the basic concept of creating an Angular App but also how to use routing and reactive forms
+I learned a lot during the creation of this project. Not only I got fimilliar with the basic concept of creating an Angular App but also how to use routing and reactive forms.
 
 ## Author
 
